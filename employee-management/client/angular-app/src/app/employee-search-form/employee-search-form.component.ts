@@ -11,17 +11,19 @@ import { EmployeeServiceService } from '../service/employee/employee-service.ser
 export class EmployeeSearchFormComponent  {
 
   employee: Employee;
+  employees: Employee[] =[];
 
   constructor(private route: ActivatedRoute, private router: Router, private employeeServiceService: EmployeeServiceService) {
     this.employee = new Employee();
   }
 
   onSubmit() {
-    this.employeeServiceService.findById(this.employee.id).subscribe(result => this.gotoUserList());
+    this.employees.pop();
+    this.employeeServiceService.findById(this.employee.id).subscribe(data =>this.employees.push(data));
   }
 
   gotoUserList() {
     this.router.navigate(['/employees']);
   }
 
-}
+} 

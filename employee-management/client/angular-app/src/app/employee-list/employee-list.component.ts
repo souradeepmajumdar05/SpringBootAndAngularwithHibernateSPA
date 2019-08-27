@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { Employee } from '../model/employee';
 import { EmployeeServiceService } from '../service/employee/employee-service.service';
 
@@ -9,8 +9,13 @@ import { EmployeeServiceService } from '../service/employee/employee-service.ser
 })
 export class EmployeeListComponent implements OnInit {
 
-  employees: Employee[];
+  @Input('employees') employees:any;
 
+  //employees: Employee[];
+
+  constructor(){}
+  ngOnInit(){}
+/*
   constructor(private employeeServiceService: EmployeeServiceService)
   {
 
@@ -20,5 +25,6 @@ export class EmployeeListComponent implements OnInit {
   {
     this.employeeServiceService.findAll().subscribe(data => this.employees = data);
   }
+  */
 
 }

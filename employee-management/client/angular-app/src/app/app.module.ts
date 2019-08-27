@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EmployeeServiceService } from './service/employee/employee-service.service';
 import { EmployeeSearchFormComponent } from './employee-search-form/employee-search-form.component';
+import { EmlpoyeeCompleteListComponent } from './emlpoyee-complete-list/emlpoyee-complete-list.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { EmployeeSearchFormComponent } from './employee-search-form/employee-sea
     AppComponent,
     EmployeeListComponent,
     EmployeeFormComponent,
-    EmployeeSearchFormComponent
+    EmployeeSearchFormComponent,
+    EmlpoyeeCompleteListComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,7 @@ export class EmployeeFormComponent  {
   }
 
   onSubmit() {
-    this.employeeServiceService.save(this.employee).subscribe(result => this.gotoUserList());
+    this.employeeServiceService.save(this.employee).subscribe(result => console.log(result));
   }
 
   gotoUserList() {
