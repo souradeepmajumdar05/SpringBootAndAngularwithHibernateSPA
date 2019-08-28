@@ -18,10 +18,13 @@ export class EmployeeFormComponent  {
   }
 
   onSubmit() {
-    this.employeeServiceService.save(this.employee).subscribe(result => console.log(result));
+    this.employeeServiceService.save(this.employee)
+      .subscribe(
+        data => console.log('success', data),
+        error => this.gotoUserList(error));
   }
 
-  gotoUserList() {
+  gotoUserList(error) {
     this.router.navigate(['/employees']);
   }
 }

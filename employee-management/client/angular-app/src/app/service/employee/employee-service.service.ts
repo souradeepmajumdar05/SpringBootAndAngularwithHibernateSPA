@@ -34,6 +34,6 @@ export class EmployeeServiceService {
 
   public delete(employeeId: number)
   {
-    return this.http.delete<Employee>(this.usersUrl + "/" + employeeId);
+    return this.http.delete(this.usersUrl + "/" + employeeId);
   }
 }

@@ -8,6 +8,7 @@
           <th scope="col">Password</th>
           <th scope="col">Email</th>
           <th scope="col">Department ID</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -17,6 +18,8 @@
           <td>{{ employee.password }}</td>
           <td><a href="mailto:{{ employee.email }}">{{ employee.email }}</a></td>
           <td>{{ employee.department_id }}</td>
+          <a><button id="{{ employee.id }}" class="btn btn-danger" (click)="onClick($event)">X</button></a>
+          <a><button id="{{ employee.id }}" class="btn btn-info" (click)="edit($event)">Edit</button></a>
         </tr>
       </tbody>
     </table>

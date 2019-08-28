@@ -22,4 +22,9 @@ export class EmlpoyeeCompleteListComponent implements OnInit {
     this.employeeServiceService.findAll().subscribe(data => this.employees = data);
   }
 
+  onLoad()
+  {
+    this.ngOnInit();
+  }
+
 }
